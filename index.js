@@ -102,3 +102,27 @@ io.on('connection', socket => {
         console.log(`${currentUser} score: ${score}`);
     });
 });
+
+//Functions to perform fullscreen and chat toggle
+function goFullScreen() {
+    var canvas = document.getElementById("defaultCanvas0");
+    if (canvas.requestFullScreen)
+        canvas.requestFullScreen();
+    else if (canvas.webkitRequestFullScreen)
+        canvas.webkitRequestFullScreen();
+    else if (canvas.mozRequestFullScreen)
+        canvas.mozRequestFullScreen();
+}
+
+function toggleChat(){
+    var chatdiv = document.getElementsByClassName("chat");
+    var toggleButton = document.getElementById("chat_minimize_button");
+    if(toggleButton.text === 'Hide chat'){
+        chatdiv[0].style.display = 'none';
+        toggleButton.text = 'Show chat';
+    }
+    else{
+        chatdiv[0].style.display = 'block';
+        toggleButton.text = 'Hide chat';
+    }
+}
