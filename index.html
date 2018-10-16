@@ -44,9 +44,13 @@
         </div>
     </section>
     <section class="atari">
+            <div class="btn_minimize">
+                    <a href="#" id="chat_minimize_button" onclick="toggleChat();">Hide chat</a>
+                </div>
         <div class="chat">
             <div class="pages">
                 <span class="page">
+                      
                     <div class="chatArea" id="chatAreaMsg">
                         <ul class="messages" id="message-list"></ul>
                     </div>
@@ -61,7 +65,11 @@
             </div>
             <div class="scoreboard" id="scoreBoard"></div>
         </div>
+        <div class="btn">
+            <a href="#" id="fullscreenButton" style="width:50px !important" onclick="goFullScreen();">Full screen</a>
+        </div>
     </section>
+
     </script>
     <script src="src/Messaging.js"></script>
 </body>
